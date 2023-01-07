@@ -3,6 +3,8 @@ Countdown &amp; World Clock application
 
 The project is created using Vite with Javascript.
 
+The app is deployed here - https://landeed-assignment.vercel.app/
+
 To run the project, follow the below steps: 
 1. Clone the repo 
 2. run npm i in the base directory
