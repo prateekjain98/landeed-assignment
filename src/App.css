@@ -5,3 +5,38 @@
   flex-wrap: wrap;
   align-content: center;
 }
+
+.clockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownContainer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.customInput {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  min-width: 200px;
+}
+
+.customError{
+  color: red;
+}
+
+.countdownHeader{
+  display: flex;
+}
+
+.countdownContainer{
+  display: flex;
+  align-items: center;
+}
