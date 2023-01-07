@@ -6,6 +6,7 @@ const CountdownTimer = ({ time, deleteTimer }) => {
   const [currentTime, setCurrentTime] = useState(time);
   const timerRef = useRef();
 
+  // Converting seconds into HH:MM:SS
   const formatTime = (seconds) => {
     return new Date(seconds * 1000).toISOString().slice(11, 19);
   };
