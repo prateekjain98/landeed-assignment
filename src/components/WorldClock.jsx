@@ -49,7 +49,7 @@ const WorldClock = () => {
         </select>
         <PuffLoader loading={isLoading} size={40} color="cyan" />
       </div>
-      <p className="customError">{error.message}</p>
+      <p className="customError">{error?.message}</p>
       <h1>{currentTime.toLocaleTimeString()}</h1>
     </div>
   );
