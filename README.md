@@ -1,7 +1,7 @@
 # landeed-assignment
 Countdown &amp; World Clock application
 
-# The project is created using Vite with Javascript.
+The project is created using Vite with Javascript.
 
 To run the project, follow the below steps: 
 1. Clone the repo 
