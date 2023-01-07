@@ -10,12 +10,12 @@ export default function Countdown() {
     if (!countdownTime.current.value || countdownTime.current.value === "00:00:00") {
       setError("Please select a time for adding countdown");
     } else {
+      // Processing the input to pass in timer row
       const timeArray = countdownTime.current.value.split(":");
       const timeInSeconds = Number(timeArray[2]) + (Number(timeArray[1]) + Number(timeArray[0]) * 60) * 60;
-      setCountdownTimers([
-        ...countdownTimers,
-        { id: countdownTimers.length === 0 ? 1 : countdownTimers[countdownTimers.length - 1].id + 1, time: timeInSeconds },
-      ]);
+      // Id is set using the last element instead of using index to avoid duplication while deleting
+      const timerId = countdownTimers.length === 0 ? 1 : countdownTimers[countdownTimers.length - 1].id + 1;
+      setCountdownTimers([...countdownTimers, { id: timerId, time: timeInSeconds }]);
     }
   };
 
@@ -25,6 +25,7 @@ export default function Countdown() {
     setCountdownTimers(timers);
   };
 
+  // To make error disappear in 5 sec
   useEffect(() => {
     setTimeout(() => {
       setError(null);
