@@ -4,7 +4,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import PuffLoader from 'react-spinners/PuffLoader'
 
-export default function WorldClock() {
+const WorldClock = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [timezone, setTimezone] = useState(timezones[0].name);
 
@@ -54,3 +54,9 @@ export default function WorldClock() {
     </div>
   );
 }
+
+WorldClock.propTypes = {}
+
+export default WorldClock
+  
+

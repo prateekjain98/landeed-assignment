@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { MdDelete } from "react-icons/md";
+import PropTypes from "prop-types";
 
-export default function CountdownTimer({ time, deleteTimer }) {
+const CountdownTimer = ({ time, deleteTimer }) => {
   const [currentTime, setCurrentTime] = useState(time);
   const timerRef = useRef();
 
@@ -34,4 +35,11 @@ export default function CountdownTimer({ time, deleteTimer }) {
       <MdDelete size={30} color="ff6863" onClick={deleteTimer} />
     </div>
   );
-}
+};
+
+CountdownTimer.propTypes = {
+  time: PropTypes.number,
+  deleteTimer: PropTypes.func,
+};
+
+export default CountdownTimer;

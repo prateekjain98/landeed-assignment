@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 
-export default function Countdown() {
+const Countdown = () => {
   const [countdownTimers, setCountdownTimers] = useState([]);
   const [error, setError] = useState();
   const countdownTime = useRef();
@@ -45,4 +45,8 @@ export default function Countdown() {
       ))}
     </div>
   );
-}
+};
+
+Countdown.propTypes = {};
+
+export default Countdown;
